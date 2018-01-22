@@ -1,0 +1,99 @@
+<HPRD3r>                                                                                           HPRD（human protein reference database）数据库是包含蛋白质注释、PPI、转录后修饰和亚细胞定位等多种信息的综合数据库
+	<protein >										   蛋白质，包含三个属性（isoform,version,id）
+		<titles>                                                                           标题集
+			<title>                                                                    标题
+				<alt_title>                                                        替代标题
+		<omim>                                                                             OMIM 为“0nline Mendelian Inheritance in Man”的简称，即在线《人类孟德尔遗传》，是一个关于人类基因和遗传紊乱的数据库（持续更新）。主要着眼于遗传性的基因疾病，包括文本信息和相关参考信息、序列纪录、图谱和相关其他数据库。
+		<gene_symbol>                                                                      基因符号
+		<gene_map_locus>                                                                   基因图位点
+			<title>                                                                    标题
+		<isoform>                                                                          isoform：同种型，同等型，同工型。由来自一个基因的mRNA前体因选择性剪接而产生多种mRNA， 并翻译出的不同蛋白质，称为同源异构体(isoform)。
+			<seq_entry >								   条目序列 , 包含一个属性（source）
+				<entry_cdna>                                                       cDNA条目
+				<entry_protein>                                                    蛋白质条目	
+			<molecular_weight>                                                         分子量
+			<entry_sequence>                                                           entry序列,包含一个属性（length）
+				<cdna_sequence >						   cDNA序列，即经过反转录得到的与RNA序列互补的DNA序列,包含连个属性（start,end）
+				<cdna_utr5/>							   UTR（Untranslated Regions)即非翻译区，是信使RNA（mRNA）分子两端的非编码片段。转录而成的mRNA序列除去编码生成多肽的coding squence，在5‘端和3’端还有一些不翻译的序列   5'-UTR从mRNA起点的甲基化鸟嘌呤核苷酸帽延伸至AUG起始密码子,包含连个属性（start,end）
+				<cdna_coding />							   cDNA编码,包含两个属性（start,end）
+				<cdna_utr3 />							   UTR（Untranslated Regions)即非翻译区，是信使RNA（mRNA）分子两端的非编码片段。转录而成的mRNA序列除去编码生成多肽的coding squence，在5‘端和3’端还有一些不翻译的序列 3'-UTR从编码区末端的终止密码子延伸至多聚A尾巴（Poly-A）的末端,包含连个属性（start,end）
+				<protein_sequence >						   蛋白质序列,包含一个属性（length）
+			<protein_domain_architecture>                                              蛋白质结构域
+				<domain >							   域,包含四个属性（domain_source，start,end,type）
+					<title>                                                    题目	
+			<modifications>                                                            修饰集合
+				<modification >							   修饰,包含一个属性（type）
+					<ptm_site>                                                 翻译后修饰(PTM)位点
+					<ptm_residue>                                              翻译后修饰残基
+					<exp_type>                                                 实验类型		
+		<expressions>                                                                      实验集合
+			<expression>                                                               实验
+				<title>                                                            标题
+				<pubmed>                                                           pubmed文献数据库索引			
+		<functions>                                                                        功能
+			<molecule_class>                                                           分子类
+				<title>                                                            题目
+			<molecular_function>                                                       分子功能
+				<title>                                                            标题
+					<go_id>                                                    基因本体（Gene Ontology，GO）是一个在生物信息学领域中广泛使用的本体。它主要包括三个分支: 生物过程、分子功能和细胞组件。
+			<biological_process>                                                       生物过程
+				<title>                                                            标题
+				<go_id>                                                            基因本体（Gene Ontology，GO）是一个在生物信息学领域中广泛使用的本体。它主要包括三个分支: 生物过程、分子功能和细胞组件。	
+<entrySet>                                                                                         entry集合
+	<entry>                                                                                    是UniProt给每个蛋白质赋予的独一无二的ID号
+		<source>                                                                           资源
+			<names>                                                                    名称
+				<shortLabel>                                                       短标签
+				<fullName>                                                         全称
+			<bibref>                                                                   参考文献
+				<xref>                                                             外部参考,包含两个属性（db,id）
+					 <primaryRef />						   主要参考,包含两个属性（db,id）
+					 <secondaryRef/>					   次要参考
+		<availabilityList>                                                                 可用性列表
+			<availability >                                                            可用性,包含一个属性（id）
+		<experimentList>                                                                   实验列表
+			<experimentDescription >                                                   实验说明,包含一个属性（id）
+				<bibref>                                                           参考文献
+					<xref>                                                     外部参考
+						<primaryRef />					   主要参考,包含五个属性（db,dbAc,id,refType,refTypeAc）
+						<secondaryRef  />				   次要参考,包含五个属性（db,dbAc,id,refType,refTypeAc）
+				<interactionDetectionMethod>                                       交互检测方法
+					<names>                                                    名称
+						<shortLabel>                                       短标签
+						<fullName>                                         全称
+					<xref>                                                     外部参考
+						<primaryRef />					   主要参考,包含五个属性（db,dbAc,id,refType,refTypeAc）
+		<interactorList>                                                                   交互者列表
+			<interactor >                                                              交互件 | 相互作用因子，包含一个属性（id）
+				<names>                                                            名称
+					<shortLabel>                                               短标签
+					<alias >						   别名,包含两个属性（type,typeAc）
+				<xref>                                                             外部参考
+					<primaryRef />						   主要参考,包含五个属性（db,dbAc,id,refType,refTypeAc）
+					<secondaryRef/>						   次要参考,包含三个属性（db,dbAc,id）
+				<interactorType>                                                   交互者类型
+					 <names>                                                   名称
+						<shortLabel>                                       短标签
+						<fullName>                                         全称
+					 <xref>                                                    参考文献
+						<primaryRef />					   主要参考 ,包含三个属性（db,dbAc,id）
+				<organism >							   蛋白质的种属来源,包含一个属性（ncbiTaxId）
+					<names>                                                    名称
+						<shortLabel>                                       短标签
+						<fullName>                                         全称
+				<sequence>                                                         序列
+		<interactionList>                                                                  相互作用列表
+			<interaction >								   相互作用，包含一个属性（id）
+				<experimentList>                                                   实验列表
+					<experimentRef>                                            实验参考
+				<participantList>                                                  参与者列表
+					<participant >                                             参与者,包含一个属性（id）
+						<interactorRef>                                    交互者参考
+		<external_links>                                                                   外部链接
+			<SwissProt>                                                                SwissProt数据库：Swiss-Prot (reviewed) 是一个高质量人工注释且非冗余的蛋白序列数据库。其中包含各类实验结果、计算得到的特征信息和文献信息等。
+			<EntrezGene>                                                               EntrezGene数据库：美国生物信息技术中心（NCBI)的字库Entrez Gene主要提供人类及其他动物等基因信息。
+			<PDB>                                                                      PDB(Protein Data Bank)数据库 ：生物大分子结构数据库，提供蛋白质、核酸等生物大分子的三维结构数据、序列详细信息、生化性质等。
+		<author>                                                                           作者
+			<annotator>                                                                注释者
+		<last_updated>                                                                     最近更新
+
